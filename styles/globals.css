@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.downloadable h1 {
+  display: none;
+}
