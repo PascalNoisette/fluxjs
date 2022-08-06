@@ -16,6 +16,8 @@ Responsive theme for [miniflux](https://github.com/miniflux/miniflux)
 
 ## Screenshot
 
+Demo : https://pascalnoisette.github.io/fluxjs
+
 |Login|Left menu|Browse|
 |---|---|---|
 |![Screenshot - Login](./docs/login.png)|![Screenshot - Left menu](./docs/menu.png)|![Screen Reader](./docs/fluxjs.png)|
