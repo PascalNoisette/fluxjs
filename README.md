@@ -37,7 +37,7 @@ If your miniflux homepage is https://miniflux.url/ you should generate an api ke
 ## Try with docker
 
 ```
-docker run --rm -p 3000:80 netpascal0123/fluxjs:1.0.4
+docker run --rm -p 3000:80 netpascal0123/fluxjs
 ```
 
 Open http://127.0.0.1:3000/fluxjs/ with your browser.
