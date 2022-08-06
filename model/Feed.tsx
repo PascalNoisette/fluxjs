@@ -3,6 +3,7 @@ export interface Feed {
     unreads:number;
     title:string;
     fetch_url:string;
+    is_feed?:boolean;
 
     icon_data?:string;
     icon?:string;

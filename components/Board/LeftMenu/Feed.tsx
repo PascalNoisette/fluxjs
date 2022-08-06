@@ -35,7 +35,11 @@ const Feed = React.forwardRef(function CustomContent(props: TreeItemContentProps
 
     return (
         <Box
-            sx={{ display: 'flex', alignItems: 'center' }}
+            sx={{
+                display: 'flex',
+                alignItems: 'center',
+                cursor: node.unreads > 0 ? 'pointer' : ''
+            }}
             title={node.title}
             className={clsx(classes.root, {
                 [classes.expanded]: expanded,
@@ -51,7 +55,7 @@ const Feed = React.forwardRef(function CustomContent(props: TreeItemContentProps
             </Box>
             <Box
                 component="span"
-                onClick={handleSelection}
+                onClick={node.is_feed ? handleSelection : handleExpansion}
                 sx={{ fontWeight: 'inherit', flexGrow: 1, display: 'flex', alignItems: 'center' }}
             >
                 {node.icon_data ? (

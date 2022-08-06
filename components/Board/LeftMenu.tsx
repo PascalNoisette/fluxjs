@@ -20,15 +20,18 @@ export default function LeftMenu({
     const router = useRouter();
     const renderTree = (node: FeedModel) => (
         <TreeItem
-            key={`${node.id}`}
-            nodeId={`${node.id}`}
+            key={node.is_feed ? `${node.id}` : `category-${node.id}`}
+            nodeId={node.is_feed ? `${node.id}` : `category-${node.id}`}
             ContentComponent={Feed}
             ContentProps={
                 {
                     onPick: (nodeId: number) => {
+                        if (isNaN(nodeId)) {
+                            return;
+                        }
                         setCurrentFeed(
                             feeds
-                                .filter((f) => f.id == nodeId)
+                                .filter((f) => f.is_feed && f.id == nodeId)
                                 .slice(-1)
                                 .pop()
                         );

@@ -43,7 +43,7 @@ export default function Board(props: Props) {
         if (hash) {
             setCurrentFeed(
                 feeds
-                    .filter((f: Feed): boolean => f.id == +hash[1])
+                    .filter((f: Feed): boolean => f.is_feed === true && f.id == +hash[1])
                     .slice(-1)
                     .pop()
             );
@@ -146,7 +146,7 @@ export default function Board(props: Props) {
                 }}
             >
                 <Toolbar />
-                <ScrollToTop/>
+                <ScrollToTop />
                 {currentFeed && (
                     <ContentArea
                         currentFeed={currentFeed}
