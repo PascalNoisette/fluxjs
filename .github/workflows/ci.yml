@@ -8,6 +8,9 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
+    env:
+      NEXT_PUBLIC_BASE_PATH: /fluxjs
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -22,3 +25,12 @@ jobs:
         run: yarn build
       - name: Lint
         run: yarn lint
+      - name: Export static files
+        run: yarn export
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: out
