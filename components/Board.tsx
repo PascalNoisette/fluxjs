@@ -17,6 +17,7 @@ import { markRead } from '../services/util';
 import ContentArea from './Board/ContentArea';
 import LeftMenu from './Board/LeftMenu';
 import TopBar from './Board/TopBar';
+import ScrollToTop from './Board/ScrollToTop';
 
 interface Props {
     /**
@@ -145,6 +146,7 @@ export default function Board(props: Props) {
                 }}
             >
                 <Toolbar />
+                <ScrollToTop/>
                 {currentFeed && (
                     <ContentArea
                         currentFeed={currentFeed}
