@@ -18,3 +18,7 @@ a {
 .downloadable h1 {
   display: none;
 }
+
+.downloadable {
+  width: 80vw;
+}
