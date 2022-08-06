@@ -61,7 +61,9 @@ export default function FeedItem({
                 </TableCell>
                 <TableCell component="th" scope="row" sx={{ padding: 0, borderBottom: 'none' }}>
                     <h2 style={{ marginBlockStart: '0.5rem', marginBlockEnd: 0 }} ref={ref}>
-                        {item.title}
+                        <a target="_blank" href={item.url} rel="noreferrer">
+                            {item.title}
+                        </a>
                     </h2>
                 </TableCell>
             </TableRow>

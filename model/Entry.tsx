@@ -3,4 +3,5 @@ export interface Entry {
     status:String;
     title:String;
     content:string;
+    url:string;
 }
